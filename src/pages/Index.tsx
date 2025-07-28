@@ -15,62 +15,32 @@ interface Character {
 
 const Index = () => {
   const [characters, setCharacters] = useState<Character[]>([
-    {
-      id: '1',
-      name: 'Арагорн',
-      description: 'Король Гондора, следопыт',
-      rating: 5,
-      avatar: '👑'
-    },
-    {
-      id: '2', 
-      name: 'Гэндальф',
-      description: 'Серый маг, мудрец',
-      rating: 5,
-      avatar: '🧙‍♂️'
-    },
-    {
-      id: '3',
-      name: 'Леголас',
-      description: 'Эльф-лучник из Лихолесья',
-      rating: 4,
-      avatar: '🏹'
-    },
-    {
-      id: '4',
-      name: 'Гимли',
-      description: 'Гном-воин с топором',
-      rating: 4,
-      avatar: '⚔️'
-    },
-    {
-      id: '5',
-      name: 'Боромир',
-      description: 'Воин Гондора',
-      rating: 3,
-      avatar: '🛡️'
-    },
-    {
-      id: '6',
-      name: 'Фродо',
-      description: 'Хоббит-хранитель кольца',
-      rating: 4,
-      avatar: '💍'
-    },
-    {
-      id: '7',
-      name: 'Сэм',
-      description: 'Верный друг Фродо',
-      rating: 5,
-      avatar: '🌱'
-    },
-    {
-      id: '8',
-      name: 'Мерри',
-      description: 'Хоббит из Шира',
-      rating: 3,
-      avatar: '🍃'
-    }
+    { id: '1', name: 'Мису', description: '', rating: 3, avatar: '🎭' },
+    { id: '2', name: 'Эвелина', description: '', rating: 3, avatar: '🌸' },
+    { id: '3', name: 'Хапилина', description: '', rating: 3, avatar: '🎨' },
+    { id: '4', name: ':)', description: '', rating: 3, avatar: '😊' },
+    { id: '5', name: 'Ярослав', description: '', rating: 3, avatar: '⚡' },
+    { id: '6', name: 'Полина', description: '', rating: 3, avatar: '🌟' },
+    { id: '7', name: 'Шизоид', description: '', rating: 3, avatar: '🤯' },
+    { id: '8', name: 'twelve', description: '', rating: 3, avatar: '🔢' },
+    { id: '9', name: 'чт', description: '', rating: 3, avatar: '📅' },
+    { id: '10', name: 'вобел', description: '', rating: 3, avatar: '🎪' },
+    { id: '11', name: 'платун', description: '', rating: 3, avatar: '💰' },
+    { id: '12', name: 'да я', description: '', rating: 3, avatar: '🙋' },
+    { id: '13', name: 'Гартер', description: '', rating: 3, avatar: '🎯' },
+    { id: '14', name: 'саман', description: '', rating: 3, avatar: '🏠' },
+    { id: '15', name: 'хорек', description: '', rating: 3, avatar: '🐾' },
+    { id: '16', name: 'miracle', description: '', rating: 3, avatar: '✨' },
+    { id: '17', name: 'хапил', description: '', rating: 3, avatar: '🎨' },
+    { id: '18', name: 'дамир', description: '', rating: 3, avatar: '🎵' },
+    { id: '19', name: 'аринка', description: '', rating: 3, avatar: '🌺' },
+    { id: '20', name: 'Дима', description: '', rating: 3, avatar: '🚀' },
+    { id: '21', name: 'Ромка попка', description: '', rating: 3, avatar: '🎈' },
+    { id: '22', name: 'павлен', description: '', rating: 3, avatar: '🦚' },
+    { id: '23', name: 'дашан', description: '', rating: 3, avatar: '🌊' },
+    { id: '24', name: 'эрик', description: '', rating: 3, avatar: '⚔️' },
+    { id: '25', name: 'егор', description: '', rating: 3, avatar: '🏔️' },
+    { id: '26', name: 'саша', description: '', rating: 3, avatar: '🎪' }
   ]);
 
   const [tiers, setTiers] = useState<Record<string, Character[]>>({
