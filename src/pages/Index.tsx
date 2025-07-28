@@ -48,7 +48,8 @@ const Index = () => {
     A: [],
     B: [],
     C: [],
-    D: []
+    D: [],
+    'хз кто это': []
   });
 
   const [draggedCharacter, setDraggedCharacter] = useState<Character | null>(null);
@@ -104,9 +105,10 @@ const Index = () => {
       A: 'bg-orange-500', 
       B: 'bg-yellow-500',
       C: 'bg-green-500',
-      D: 'bg-blue-500'
+      D: 'bg-blue-500',
+      'хз кто это': 'bg-gray-500'
     };
-    return colors[tier as keyof typeof colors];
+    return colors[tier as keyof typeof colors] || 'bg-gray-500';
   };
 
   const renderStars = (rating: number) => {
@@ -139,7 +141,7 @@ const Index = () => {
 
         {/* Tier List */}
         <div className="mb-8 space-y-4">
-          {['S', 'A', 'B', 'C', 'D'].map(tier => (
+          {['S', 'A', 'B', 'C', 'D', 'хз кто это'].map(tier => (
             <div key={tier} className="flex bg-white rounded-lg shadow-sm border">
               {/* Tier Label */}
               <div className={`${getTierColor(tier)} w-20 flex items-center justify-center rounded-l-lg`}>
@@ -166,8 +168,9 @@ const Index = () => {
                         <div className="text-2xl">{character.avatar}</div>
                         <div className="flex-1">
                           <h3 className="font-semibold text-sm">{character.name}</h3>
-                          <p className="text-xs text-gray-600 mb-1">{character.description}</p>
-                          {renderStars(character.rating)}
+                          {character.description && (
+                            <p className="text-xs text-gray-600">{character.description}</p>
+                          )}
                         </div>
                         <Button
                           variant="ghost"
@@ -205,8 +208,9 @@ const Index = () => {
                   <div className="text-3xl">{character.avatar}</div>
                   <div className="flex-1">
                     <h3 className="font-semibold">{character.name}</h3>
-                    <p className="text-sm text-gray-600 mb-2">{character.description}</p>
-                    {renderStars(character.rating)}
+                    {character.description && (
+                      <p className="text-sm text-gray-600">{character.description}</p>
+                    )}
                   </div>
                 </div>
               </Card>
